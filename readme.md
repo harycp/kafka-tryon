@@ -1,4 +1,4 @@
-# Kafka Tryout with Express.js
+# Kafka with Express.js
 
 Proyek ini adalah percobaan sederhana untuk mempelajari integrasi **Apache Kafka** dengan **Express.js**. Proyek ini mencakup penggunaan Kafka sebagai _Message Broker_ untuk mengelola alur verifikasi email dan Express.js sebagai kerangka kerja REST API.
 
