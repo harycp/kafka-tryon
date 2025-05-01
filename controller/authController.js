@@ -1,5 +1,5 @@
 const emailService = require("../service/emailService");
-const { verifyUser } = require("../utils/userStorage");
+const { verifyUser, addUser } = require("../utils/userStorage");
 
 const register = async (req, res) => {
   const { email } = req.body;
@@ -8,7 +8,8 @@ const register = async (req, res) => {
     return res.status(400).json({ error: "Email diperlukan" });
   }
   try {
-    await emailService.sendVerificationEmail(email);
+    const user = addUser(email);
+    await emailService.sendVerificationEmail(user);
     res.json({
       message: "Silahkan cek terminal untuk link verifikasi",
     });

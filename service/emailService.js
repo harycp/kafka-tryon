@@ -14,6 +14,7 @@ const sendVerificationEmail = async (user) => {
         },
       ],
     });
+    console.log(user);
     console.log(
       `[Kafka Producer] Sent verification email event for ${user.email}`
     );
